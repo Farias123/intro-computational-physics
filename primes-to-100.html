@@ -1,0 +1,28 @@
+<script>
+//Vitor Farias 12/03/2023
+
+function isPrime(number){
+	if (number === 1){
+		return false
+	}
+	if (number === 2){
+		return true
+	}
+
+	let comp = 2
+
+	while (comp < number){
+		if (number%comp === 0){
+			return false
+		}
+		comp += 1
+	}
+	return true 
+}
+
+for (var counter = 1; counter < 100; counter++){
+	if(isPrime(counter)){
+		console.log(counter)}
+}
+
+</script>
