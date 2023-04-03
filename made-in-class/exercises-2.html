@@ -1,0 +1,12 @@
+<script>
+{
+let y0 = 1.00e-2, f = 1.00e5, lambda = 0.033, x = 2.00, t = 2.00
+let y = y0*Math.cos(2*Math.PI*(x/lambda-f*t))
+console.log("Y is equal to ",y)
+}
+{
+let Z = 2, a0 = 5e-11, r = 2*a0
+let psi = 1/Math.PI**(1/2)*(Z/a0)**(3/2)*Math.exp(-Z*r/a0)
+console.log("psi is equal to ",psi)
+}
+</script>
