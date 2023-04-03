@@ -1,0 +1,58 @@
+<script>
+
+function randomValues(a){
+	for (let i=0;i<10;i+=1){
+		let verif = false;
+		let x = Math.floor(-10 +20*Math.random());
+			verif = false;
+		for (i=0;i<a.length;i+=1){
+			if (a[i] === x){
+				verif = true;
+			}
+		}
+		if(verif === false){
+			a.push(x);
+		}
+	}
+	return a
+}
+let a = []
+a = randomValues(a);
+console.log(a);
+
+
+
+let max = -Infinity;
+let min = Infinity;
+let iMax,iMin;
+
+for(i=0;i<a.length;i+=1){
+	if (a[i] > max){
+		max = a[i];
+		iMax = i;
+	}
+	if (a[i] < min){
+		min = a[i];
+		iMin = i;
+	}
+}
+let aux = a[iMax];
+a[iMax] = a[iMin];
+a[iMin] = aux;
+
+let b = [];
+let c = [];
+
+for(i=0;i<a.length;i+=1){
+	if(a[i]%2 == 0){
+		b.push(a[i]);
+	}else{
+		c.push(a[i]);
+	}
+}
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+</script>
