@@ -1,0 +1,41 @@
+<script>
+
+let n = Math.random();
+console.log(n);
+
+let q;
+
+if (n < 0.25){
+	q = "I";
+}else if (n < 0.5){
+	q = "II";
+}else if (n < 0.75){
+	q = "III";
+}else{
+	q = "IV";
+}
+console.log(q)
+
+let x = parseFloat(window.prompt("Digite x:"));
+let y = parseFloat(window.prompt("Digite y:"));
+
+console.log(x,y);
+
+let result;
+
+if ((q == "I")&&(x > 0)&&(y > 0)){
+	result = ":)";
+}else if ((q == "II")&&(x < 0)&&(y > 0)){
+	result = ":)";
+}else if ((q == "III")&&(x < 0)&&(y < 0)){
+	result = ":)";
+}else if((q == "IV")&&(x > 0)&&(y <0)){
+	result = ":)";
+}else{
+	result = ":(";
+}
+console.log(result);
+
+
+
+</script>
