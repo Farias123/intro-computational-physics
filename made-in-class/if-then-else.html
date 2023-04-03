@@ -1,0 +1,16 @@
+<script>
+let condition = window.confirm("'OK' to convert from degrees to radians, 'Cancel' to convert from radians to degrees.");
+
+if (condition){
+	let angInDeg = parseFloat(window.prompt("Type the angle in degrees:", 0));
+	let angInRad = (angInDeg%360)*Math.PI/180;
+	window.alert(angInDeg + " degrees is equal to " + angInRad + " radians.");
+	console.log(angInDeg + " degrees is equal to " + angInRad + " radians.");
+	}
+else{
+	let angInRad = parseFloat(window.prompt("Type the angle in radians:", 0));
+	let angInDeg = (angInRad%(2*Math.PI))*180/Math.PI
+	window.alert(angInRad + " radians is equal to " + angInDeg + " degrees.");
+	console.log(angInRad + " radians is equal to " + angInDeg + " degrees.");
+	}
+</script>
