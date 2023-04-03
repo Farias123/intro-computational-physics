@@ -1,0 +1,27 @@
+<script>
+
+let x0 = 0;
+let v0 = 0;
+let a = 10;
+let t = 0;
+let dt = 0.1;
+let tFinal = 10;
+let n = tFinal/dt;
+
+for (let i=0; i<n; i++){
+	t += dt;
+	let x = x0 + v0*t + (a*t**2)/2;
+	console.log(t.toFixed(1),x.toFixed(3));
+	
+	document.write(
+	"<i>t</i> = " + t.toFixed(1).replace(".",",") + " s" +
+	", " +
+	"<i>x</i> = " + x.toFixed(3).replace(".",",") + " m" +
+	"<br>");
+
+
+}
+
+
+
+</script>
