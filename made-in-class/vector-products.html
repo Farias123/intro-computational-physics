@@ -1,0 +1,29 @@
+<script>
+let vectorU = [15, 5, -8];
+let vectorV = [-5, 12, 4];
+
+function scalarProduct(u,v){
+	let product = 0;
+	for(i=0; i<u.length; i+=1){
+		product += u[i]*v[i]
+	}
+	return product;
+}
+
+function findTheta(u,v){
+	let moduleU = 0;
+	let moduleV = 0;
+	for(i=0; i<u.length; i+=1){
+		moduleU += u[i]**2;
+		moduleV += v[i]**2;
+	}
+	moduleU = Math.sqrt(moduleU);
+	moduleV = Math.sqrt(moduleV);
+	let cos_theta = scalarProduct(u,v)/moduleU*moduleV;
+	let theta = Math.acos(cos_theta);
+	console.log(moduleU,moduleV);
+	return theta;
+}
+
+
+</script>
