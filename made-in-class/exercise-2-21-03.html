@@ -1,0 +1,23 @@
+<script>
+
+let A = 0.10;
+let f = 2;
+let b2m = 2;
+let t = 0;
+let dt = 0.1;
+let tFinal = 2;
+let n = tFinal/dt;
+
+for (let i=0; i<n; i++){
+	t += dt;
+	let x = A*Math.cos(2*Math.PI*f*t)*Math.exp(-b2m*t)
+	console.log(t.toFixed(1),x.toFixed(3));
+	
+	document.write(
+	"<i>t</i> = " + t.toFixed(1).replace(".",",") + " s" +
+	", " +
+	"<i>x</i> = " + x.toFixed(3).replace(".",",") + " m" +
+	"<br>");
+}
+
+</script>
