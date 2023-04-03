@@ -1,0 +1,39 @@
+<script>
+
+let a = [1,2,3,4,5,6,7,8,9];
+
+let b = ['a','b','c','d','e','f'];
+
+let c = a.concat(b);
+
+let d = b.concat(a);
+
+console.log(c);
+console.log(d);
+
+let e = [];
+let n;
+if (a.length>b.length){
+	n = b.length;
+}else{
+	n = a.length;
+}
+console.log(n);
+
+for(let i=0; i<n; i+=1){
+	e.push(a[i]);
+	e.push(b[i]);
+}
+console.log(e)
+
+
+let f = [];
+let k = 0;
+for(let i=0; i<n;i+=1){
+	f[k] = a[i];
+	k += 1;
+	f[k] = b[i];
+	k += 1;
+}
+console.log(f)
+</script>
