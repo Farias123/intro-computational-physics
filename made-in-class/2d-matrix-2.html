@@ -1,0 +1,24 @@
+<script>
+
+let grades = [];
+
+grades[0] = ["Ana",7.0,8.0,9.0];
+grades[1] = ["João",5.0,6.0,10.0];
+grades[2] = ["Paula",9.0,9.0,9.0];
+
+let averages = [];
+averages[50] = 0;
+
+for(i=0;i<grades.length;i+=1){
+	averages[i] = 0;
+	for(j=1;j<grades[i].length;j+=1){
+		averages[i] += grades[i][j];
+	}
+	averages[i] = averages[i]/(grades[i].length-1);
+	console.log("A média das notas do aluno",grades[i][0],"é:",averages[i]);
+	averages[50] += averages[i];
+}
+averages[50] = averages[50]/grades.length;
+console.log("A média da turma é:",averages[50]);
+
+</script>  
