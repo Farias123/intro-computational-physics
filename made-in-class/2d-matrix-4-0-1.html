@@ -1,0 +1,19 @@
+<script>
+let M = 5;
+let N = 5;
+
+let A = [];
+for (let i=0; i<M; i+=1){
+	A[i] = [];
+	for (let j=0; j<N; j+=1){
+		if (Math.random()<0.5){
+			A[i][j] = 0;
+		}else{
+			A[i][j] = 1;
+		}
+		//A[i][j] = Math.round(Math.random()); - works the same way on this case
+	}
+}
+console.table(A);
+
+</script>
