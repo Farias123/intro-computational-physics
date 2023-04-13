@@ -1,0 +1,14 @@
+<script>
+const e = 1.6e-19;
+
+function eF(q1,q2,r){
+//electric force
+	const K = 9e9;
+	return K*q1*q2/(r**2);
+}
+
+console.log(eF(1,1,1));
+
+console.log(eF(e,e,1e-9));
+
+</script>
