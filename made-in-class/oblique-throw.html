@@ -1,0 +1,40 @@
+<script>
+
+const g = 9.8;
+let x0 = 0, y0 = 0;
+let v0 = 10, theta = 45*Math.PI/180;
+let v0x = v0*Math.cos(theta);
+let v0y = v0*Math.sin(theta);
+
+function space(def,t){
+	if (def === "x"){
+		return x0+v0x*t;
+	}else if(def === "y"){
+		return y0+v0y*t-(g*t**2)/2;
+	}
+}
+
+function v(def,t){
+	if(def === "x"){
+		return v0x;
+	}else if(def === "y"){
+		return v0y - g*t;
+	}
+}
+let x2 = space("x",2);
+let vx2 = v("x",2);
+let y5 = space("y",5);
+let vy5 = v("y",5);
+console.log(x2, vx2, y5, vy5);
+
+let t = 0;
+while(space("y",t) >= 0){
+	document.write("t="+t.toFixed(1)+", X=");
+	document.write(space("x",t).toFixed(2)+", Vx=");
+	document.write(v("x",t).toFixed(2)+", Y=");
+	document.write(space("y",t).toFixed(2)+", Vy=");
+	document.write(v("y",t).toFixed(2)+"<br>");
+	t += 0.01;
+}
+
+</script>
