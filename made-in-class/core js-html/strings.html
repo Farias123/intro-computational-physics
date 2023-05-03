@@ -1,6 +1,6 @@
 <script>
 
-let string = `Computational physics classes are great.`;
+let string = "Todo corpo continua em seu estado de repouso ou de movimento uniforme em uma linha reta, a menos que seja forçado a mudar aquele estado por forças aplicadas sobre ele."
 
 function countLetters(s,c){
     let count = 0;
@@ -21,7 +21,6 @@ function distLetters(s){
     letters.forEach(function(letter){
         qnttLetters[letter] = countLetters(s,letter);
     })
-
     return qnttLetters;
 }
 
@@ -29,7 +28,7 @@ console.log(distLetters(string));
 
 function countWords(s){
     s = s.split(" ");
-    return s.length
+    return s.length;
 }
 
 console.log(countWords(string))
@@ -49,5 +48,49 @@ function wordMediumSize(s){
 
 console.log(wordMediumSize(string));
 
+function distWords(s){
+	s = s.split(" ");
+	let dist = [0,0,0,0,0,0,0,0,0,0];
+	let ref = [0,1,2,3,4,5,6,7,8,9];
+	
+	for(i=0;i<s.length;i+=1){
+		for(j=0;j<ref.length;j+=1){
+			if(s[i].length === ref[j]){
+				dist[j] += 1;
+			}
+		}	
+	}
+	return dist;
+}
+
+console.log(distWords(string));
+
+function countDiphtongs(s){
+	const vowels = "aeiou";
+	let count = 0;
+	
+	for(i=0;i<s.length-1;i+=1){
+		if(vowels.includes(s[i]) && vowels.includes(s[i+1])){
+			count+=1;
+		}	
+	}
+	return count;
+}
+
+console.log(countDiphtongs(string));
+
+function countClusters(s){
+	const consonants = "bcçdfghjklmnpqrstvwxyz";
+	let count = 0;
+	
+	for(i=0;i<s.length-1;i+=1){
+		if(consonants.includes(s[i]) && consonants.includes(s[i+1])){
+			count+=1;
+		}	
+	}
+	return count;
+}
+
+console.log(countClusters(string));
 
 </script>
