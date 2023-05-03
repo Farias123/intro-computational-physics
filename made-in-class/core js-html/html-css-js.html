@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<style>
+		ol {
+			list-style-type: lower-greek; 
+			background-color: green; 
+			border-radius: 20%; 
+			width: 7%;
+		}
+		li {
+			color: black;
+		}
+	</style>
+	
+	<script>
+		
+	function doSmth(){
+		window.alert("I am doing something.")
+	}
+
+	function changeColor(){
+		document.getElementById("button").style.backgroundColor = "blue";
+	}
+
+	function otherColor(){
+		document.getElementById("button").style.backgroundColor = "yellow";
+	}
+
+	</script>
+
+</head>
+
+<body>
+
+<input type = "button" id = "button" value = "OK!" 
+	onClick = "doSmth()"
+	onMouseOver = "changeColor()"
+	onMouseOut = "otherColor()"/>
+
+<h1>Title</h1>
+
+<h2>Subtitle</h2>
+
+<p>This <b>is</b> a <i>paragraph</i></p>
+
+<ul>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+</ul>
+
+<ol>
+	<li><a href="https://github.com/Farias123/computational-physics" target = "blank">Item</a></li>
+	<li>Item</li>
+	<li>Item</li>
+</ol>
+
+
+
+</body>
+
+</html>
