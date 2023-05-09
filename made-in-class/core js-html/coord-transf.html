@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset = "utf-8">
+
+<style>
+	input[type = button]{
+		background-color: rgb(170,170,170);
+		border-radius: 20%;
+	}
+	input[type = text]{
+		width: 5em;
+		text-align: center; 
+	}
+	table {
+		
+	}
+	
+</style>
+
+</head>
+
+<body>
+	<h2 style = "text-align: center">
+		Coordinates transformation	
+	</h2>
+
+<table style="width: 600px; margin: auto">
+	<tr>
+		<td>x = <input type= "text" id = "x"></td>
+		<td>r = <input type= "text" id = "r"></td>
+	</tr>
+	<tr>
+		<td>y = <input type = "text" id = "y"></td>
+		<td>&theta; = <input type = "text" id = "theta"></td>
+	</tr>
+	<tr>
+		<td><input type = "button"; value = "To polar" onClick = "toPolar()"></td>
+		<td><input type = "button"; value = "To rectangular" onClick = "toRectangular()"></td>
+	</tr>
+</table>
+
+<script>
+
+function toPolar(){
+	let x = parseFloat(document.getElementById("x").value);
+	let y = parseFloat(document.getElementById("y").value);
+	let r = Math.sqrt(x**2+y**2);
+	let theta = Math.atan2(y,x);
+	document.getElementById("r").value = r;
+	document.getElementById("theta").value = theta; 
+}
+
+function toRectangular(){
+	let r = parseFloat(document.getElementById("r").value);
+	let theta = parseFloat(document.getElementById("theta").value);
+	let x = r*Math.cos(theta);
+	let y = r*Math.sin(theta);
+}
+
+</script>
+
+</body>
+
+</html>
